@@ -37,5 +37,11 @@ public class ServiceImpl implements StudentService {
         return studentRepo.findAll();
     }
 
+    @Override
+    public String updateStudentById(int id) {
+
+        return "Student updated";
+    }
+
 
 }

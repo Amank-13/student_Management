@@ -22,6 +22,11 @@ public class StudentController {
     public Student findByStuId(@RequestParam("id") Long id){
         return studentService.findStudentById(id);
     }
+    @PutMapping("/updateStudentById")
+    public String updateStudent(@RequestBody int id){
+
+        return studentService.updateStudentById(id);
+    }
 
     @GetMapping("/findAllStudents")
     public List<Student> findAllStudents(){
