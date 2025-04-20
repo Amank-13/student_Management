@@ -2,8 +2,11 @@ package com.studentsData.Student.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 @Entity
 public final class Student {
@@ -23,6 +26,8 @@ public final class Student {
     @OneToMany(mappedBy = "student", orphanRemoval = true, cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Subject> stuSubDetails = new ArrayList<>();
+
+
 
     // Getters and Setters
     public Long getStuId() {

@@ -2,6 +2,7 @@ package com.studentsData.Student.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 
 @Entity
 public class Subject {
@@ -21,7 +22,7 @@ public class Subject {
     @ManyToOne
     @JoinColumn(name = "stu_Id", nullable = false)
     @JsonBackReference
-    private Student student = new Student();
+    private Student student ;
 
     public long getSub_Id() {
         return sub_Id;

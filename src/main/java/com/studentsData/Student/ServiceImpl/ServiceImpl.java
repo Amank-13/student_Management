@@ -24,7 +24,8 @@ public class ServiceImpl implements StudentService {
         // Save the student, cascade will handle saving subjects
         studentRepo.save(student);
 
-        return "Data saved successfully!";
+
+        return "Student added successfully!";
     }
 
     @Override
@@ -37,11 +38,8 @@ public class ServiceImpl implements StudentService {
         return studentRepo.findAll();
     }
 
-    @Override
-    public String updateStudentById(int id) {
 
-        return "Student updated";
-    }
+
 
 
 }

@@ -18,14 +18,10 @@ public class StudentController {
 
         return studentService.addStudents(student);
     }
-    @GetMapping("/findByStuId")
-    public Student findByStuId(@RequestParam("id") Long id){
-        return studentService.findStudentById(id);
-    }
-    @PutMapping("/updateStudentById")
-    public String updateStudent(@RequestBody int id){
 
-        return studentService.updateStudentById(id);
+    @GetMapping("/findByStuId/{id}")
+    public Student findByStuId(@PathVariable("id") Long id){
+        return studentService.findStudentById(id);
     }
 
     @GetMapping("/findAllStudents")
