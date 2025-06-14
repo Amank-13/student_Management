@@ -20,8 +20,6 @@ public class ServiceImpl implements StudentService {
         if (student.getStuSubDetails() != null) {
             student.getStuSubDetails().forEach(subject -> subject.setStudent(student));
         }
-
-        // Save the student, cascade will handle saving subjects
         studentRepo.save(student);
 
 
